@@ -1,44 +1,222 @@
 [
   {
-    "barcode": "4891028000018",
-    "name": "維他奶原味 250ml (自動更新版)",
+    "barcode": "4891234000011",
+    "name": "金象牌頂上長米 5kg",
     "prices": [
       {
-        "shop": "新苗超級市場 (氹仔店)",
-        "price": 5,
-        "is_cheapest": true
-      },
-      {
-        "shop": "來來超級市場 (花城店)",
-        "price": 5.5,
-        "is_cheapest": false
-      },
-      {
-        "shop": "百佳超級市場 (氹仔店)",
-        "price": 5.5,
-        "is_cheapest": false
-      }
-    ]
-  },
-  {
-    "barcode": "4891008100110",
-    "name": "金象牌頂上香米 5kg (自動更新版)",
-    "prices": [
-      {
-        "shop": "新苗超級市場 (氹仔店)",
+        "shop": "百佳超級市場",
         "price": 76.5,
         "is_cheapest": true
       },
       {
-        "shop": "百佳超級市場 (氹仔店)",
-        "price": 85,
+        "shop": "來來超級市場",
+        "price": 78.9,
         "is_cheapest": false
       },
       {
-        "shop": "來來超級市場 (花城店)",
-        "price": 86.5,
+        "shop": "新苗超級市場",
+        "price": 79,
         "is_cheapest": false
       }
-    ]
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000022",
+    "name": "維他奶 Original 250ml (6包裝)",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 15.9,
+        "is_cheapest": true
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 16.2,
+        "is_cheapest": false
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 16.5,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000033",
+    "name": "日清出前一丁 麻油味 (5包裝)",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 18.5,
+        "is_cheapest": true
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 19.2,
+        "is_cheapest": false
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 19.9,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000044",
+    "name": "Meadow Fresh 純牛奶 1L",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 21.5,
+        "is_cheapest": true
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 22,
+        "is_cheapest": false
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 22.5,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000055",
+    "name": "藍妹啤酒 500ml (4罐裝)",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 43.9,
+        "is_cheapest": true
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 44.5,
+        "is_cheapest": false
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 45,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000066",
+    "name": "維他蒸餾水 4.5L",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 17.5,
+        "is_cheapest": true
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 18,
+        "is_cheapest": false
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 18.5,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000077",
+    "name": "壽桃牌非油炸伊麵 (5包裝)",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 15.9,
+        "is_cheapest": true
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 16.5,
+        "is_cheapest": false
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 16.9,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000088",
+    "name": "李錦記舊裝蠔油 510g",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 27.9,
+        "is_cheapest": true
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 28.2,
+        "is_cheapest": false
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 28.5,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000099",
+    "name": "皇冠 3層衛生紙 (10卷裝)",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 37.9,
+        "is_cheapest": true
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 38.5,
+        "is_cheapest": false
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 39.9,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
+  },
+  {
+    "barcode": "4891234000100",
+    "name": "滴露殺菌潔手液 250ml",
+    "prices": [
+      {
+        "shop": "百佳超級市場",
+        "price": 23.9,
+        "is_cheapest": true
+      },
+      {
+        "shop": "新苗超級市場",
+        "price": 24.5,
+        "is_cheapest": false
+      },
+      {
+        "shop": "來來超級市場",
+        "price": 24.9,
+        "is_cheapest": false
+      }
+    ],
+    "last_updated": "2026-10-10"
   }
 ]

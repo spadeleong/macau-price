@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇲🇴 澳門超市街坊格價通（公益測試版）</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f7f9fa;
+            margin: 0;
+            padding: 15px;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 13px;
+            color: #e67e22;
+            background: #fef5e7;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .search-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 14px;
+        }
+        .price-row:last-child {
+            border-bottom: none;
+        }
+        .cheapest {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 30px;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🇲🇴 澳門超市街坊格價通</h1>
+        <div class="subtitle">🌱 純公益無廣告・幫街坊精明買餸</div>
+    </header>
+
+    <!-- 搜尋欄 -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 輸入想查嘅商品，例如：米、油、牛奶..." onkeyup="searchProduct()">
+    </div>
+
+    <!-- 今日精選格價/差價最大排行榜 -->
+    <div id="productList">
+        <div class="card">
+            <h3>🔥 金象牌頂上香米 5kg</h3>
+            <div class="price-row">
+                <span>新苗超級市場</span>
+                <span class="cheapest">$78.0 MOP (最平)</span>
+            </div>
+            <div class="price-row">
+                <span>來來超級市場</span>
+                <span>$86.5 MOP</span>
+            </div>
+            <div class="price-row">
+                <span>百佳超級市場</span>
+                <span>$85.0 MOP</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>🔥 刀嘜純花生油 900ml</h3>
+            <div class="price-row">
+                <span>百佳超級市場</span>
+                <span class="cheapest">$35.9 MOP (最平)</span>
+            </div>
+            <div class="price-row">
+                <span>新苗超級市場</span>
+                <span>$39.5 MOP</span>
+            </div>
+            <div class="price-row">
+                <span>來來超級市場</span>
+                <span>$41.0 MOP</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 法律與數據來源合規聲明 -->
+    <footer>
+        <p>📊 本網頁之物價數據源自澳門特別行政區政府消費者委員會[span_0](start_span)[span_0](end_span)。</p>
+        <p>本工具僅供市民日常格價參考，屬非商業性公益用途[span_1](start_span)[span_1](end_span)。</p>
+    </footer>
+</div>
+
+<script>
+    // 簡單的前端搜尋模擬函數
+    function searchProduct() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let cards = document.getElementsByClassName('card');
+        
+        for (let i = 0; i < cards.length; i++) {
+            let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+            if (title.indexOf(input) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

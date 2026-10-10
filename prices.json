@@ -1,0 +1,29 @@
+[
+  {
+    "barcode": "4891028000018",
+    "name": "維他奶原味 250ml",
+    "prices": [
+      { "shop": "新苗超級市場 (氹仔店)", "price": 5.2, "is_cheapest": true },
+      { "shop": "來來超級市場 (花城店)", "price": 5.5, "is_cheapest": false },
+      { "shop": "百佳超級市場 (氹仔店)", "price": 5.5, "is_cheapest": false }
+    ]
+  },
+  {
+    "barcode": "4891008100110",
+    "name": "金象牌頂上香米 5kg",
+    "prices": [
+      { "shop": "新苗超級市場 (氹仔店)", "price": 78.0, "is_cheapest": true },
+      { "shop": "百佳超級市場 (氹仔店)", "price": 85.0, "is_cheapest": false },
+      { "shop": "來來超級市場 (花城店)", "price": 86.5, "is_cheapest": false }
+    ]
+  },
+  {
+    "barcode": "4891234567890",
+    "name": "刀嘜純花生油 900ml",
+    "prices": [
+      { "shop": "百佳超級市場 (氹仔店)", "price": 35.9, "is_cheapest": true },
+      { "shop": "新苗超級市場 (氹仔店)", "price": 39.5, "is_cheapest": false },
+      { "shop": "來來超級市場 (花城店)", "price": 41.0, "is_cheapest": false }
+    ]
+  }
+]

@@ -5,6 +5,10 @@ on:
     - cron: '0 0 * * *'
   workflow_dispatch:
 
+# 授予倉庫寫入權限，確保可以自動提交代碼
+permissions:
+  contents: write
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -23,7 +27,9 @@ jobs:
           node update.js
           
       - name: 自動提交並推送到倉庫
-        uses: stefanbuck/git-auto-commit-action@v4
-        with:
-          commit_message: "🤖 系統自動更新每日超市物價數據"
-          file_pattern: prices.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add prices.json
+          git commit -m "🤖 系統自動更新每日超市物價數據" || echo "No changes to commit"
+          git push

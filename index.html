@@ -34,6 +34,21 @@
             font-weight: bold;
         }
         .scan-btn:active { background-color: #2980b9; }
+
+        .close-btn {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none; /* 預設隱藏，開相機時才顯示 */
+        }
+        .close-btn:active { background-color: #c0392b; }
         
         #reader { width: 100%; margin-top: 15px; display: none; border-radius: 8px; overflow: hidden; }
         
@@ -60,8 +75,11 @@
     <div class="action-box">
         <input type="text" id="searchInput" placeholder="🔍 輸入商品名稱或 Barcode..." onkeyup="filterProducts()">
         <button class="scan-btn" onclick="startScanner()">📷 點擊開啟鏡頭掃描 Barcode</button>
+        
         <!-- 鏡頭預覽視窗 -->
         <div id="reader"></div>
+        <!-- 關閉相機按鈕 -->
+        <button id="closeScanBtn" class="close-btn" onclick="stopScanner()">❌ 關閉相機</button>
     </div>
 
     <!-- 商品列表 -->
@@ -70,8 +88,8 @@
     </div>
 
     <footer>
-        <p>📊 本網頁之物價數據源自澳門特別行政區政府消費者委員會[span_0](start_span)[span_0](end_span)。</p>
-        <p>本工具僅供市民日常格價參考，屬非商業性公益用途[span_1](start_span)[span_1](end_span)。</p>
+        <p>📊 本網頁之物價數據源自澳門特別行政區政府消費者委員會。</p>
+        <p>本工具僅供市民日常格價參考，屬非商業性公益用途。</p>
     </footer>
 </div>
 
@@ -133,13 +151,14 @@
     function startScanner() {
         let readerDiv = document.getElementById('reader');
         readerDiv.style.display = "block";
+        document.getElementById('closeScanBtn').style.display = "block"; // 顯示關閉按鈕
 
         if (!html5QrCode) {
             html5QrCode = new Html5Qrcode("reader");
         }
 
         html5QrCode.start(
-            { facingMode: "environment" }, // 優先使用手機後置鏡頭
+            { facingMode: "environment" }, // 優先使用後置鏡頭
             {
                 fps: 10,
                 qrbox: { width: 250, height: 100 }
@@ -148,18 +167,19 @@
                 // 成功掃描到 Barcode！
                 alert(`成功掃描條形碼：${decodedText}`);
                 
-                // 將 Barcode 填入搜尋框並進行過濾
+                // 填入搜尋框並過濾
                 document.getElementById('searchInput').value = decodedText;
                 filterProducts();
 
-                // 關閉鏡頭
+                // 自動關閉相機
                 stopScanner();
             },
             (errorMessage) => {
-                // 掃描中（未對準時會持續觸發，可不處理）
+                // 掃描中
             }
         ).catch(err => {
             alert("無法開啟相機，請檢查瀏覽器相機權限：" + err);
+            document.getElementById('closeScanBtn').style.display = "none";
         });
     }
 
@@ -168,9 +188,15 @@
         if (html5QrCode) {
             html5QrCode.stop().then(() => {
                 document.getElementById('reader').style.display = "none";
+                document.getElementById('closeScanBtn').style.display = "none"; // 隱藏關閉按鈕
             }).catch(err => {
                 console.error("停止相機失敗", err);
+                document.getElementById('reader').style.display = "none";
+                document.getElementById('closeScanBtn').style.display = "none";
             });
+        } else {
+            document.getElementById('reader').style.display = "none";
+            document.getElementById('closeScanBtn').style.display = "none";
         }
     }
 

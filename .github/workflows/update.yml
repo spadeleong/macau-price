@@ -23,7 +23,7 @@ jobs:
           node update.js
           
       - name: 自動提交並推送到倉庫
-        uses: stefanzweig/git-auto-commit-action@v4
+        uses: stefanbuck/git-auto-commit-action@v4
         with:
           commit_message: "🤖 系統自動更新每日超市物價數據"
           file_pattern: prices.json

@@ -16,11 +16,6 @@ jobs:
       - name: 檢出代碼倉庫
         uses: actions/checkout@v4
 
-      - name: 設定 Node.js 環境
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
       - name: 執行更新腳本
         run: |
           echo "正在從數據源獲取最新物價..."
